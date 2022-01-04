@@ -5,7 +5,7 @@ const Todolist = ({ todos, setTodos, filterTodo }) => {
     return (
         <div className='todo-container'>
             <ul className='todo-list'>
-                { filterTodo.map(todo => (
+                { (filterTodo.length > 0 ? filterTodo : todos).map(todo => (
                     <Todo key={todo.id} todo={todo} todos={todos} setTodos={setTodos}/>
                 ))}
             </ul>
